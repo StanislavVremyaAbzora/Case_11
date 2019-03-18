@@ -1,0 +1,83 @@
+from minkovskiy import *
+from square import *
+from tree import *
+from branch import *
+from koch import *
+from ice_fractal import *
+from turtle import *
+from ice_fractal_2 import *
+from snowflake import *
+from levi import *
+
+
+def main():
+    print('1 - Убегающий квадрат')
+    print('2 - Двоичное дерево')
+    print('3 - Ветка')
+    print('4 - Кривая Коха')
+    print('5 - Снежинка Коха')
+    print('6 - Кривая Минковского')
+    print('7 - Ледяной фрактал 1')
+    print('8 - Ледяной фрактал 2')
+    print('9 - Кривая Леви')
+    int(input(('Укажите номер фрактала, который вы бы хотели нарисовать')))
+
+    x = int(input())
+    y = int(input('Пожалуйста, укажите глубину рекурсии:'))
+    z = int(input('Пожалуйста, укажите длину стороны:'))
+
+    if x == 1:
+        k(z, y)
+    elif x == 2:
+        left(90)
+        tree(z,y)
+
+    elif x == 3:
+        up()
+        goto(0, -100)
+        left(90)
+        down()
+        branch(y,z)
+
+    elif x == 4:
+        up()
+        goto(-100, 0)
+        down()
+        koch(y,z)
+
+    elif x == 5:
+        up()
+        goto(-100, 0)
+        down()
+        snezhinka(y,z)
+
+
+    elif x == 6:
+        up()
+        goto(-100, 0)
+        down()
+        mink(y, z)
+
+    elif x == 7:
+        up()
+        goto(-100, 0)
+        down()
+        ice(y,z)
+
+    elif x == 8:
+        up()
+        goto(-100, 0)
+        down()
+        ice2(y, z)
+
+    elif x == 9:
+        up()
+        goto(-100, 0)
+        down()
+        levi(y, z)
+
+
+
+
+if __name__ == "__main__":
+    main()
