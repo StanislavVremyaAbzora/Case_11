@@ -17,8 +17,8 @@ def main():
   up()
   goto(-100,0)
   down()
-  n = int(input('Enter the depth of the recursion:'))
-  a = int(input('Enter the side length:'))
+  n = int(input('Пожалуйста, укажите глубину рекурсии:'))
+  a = int(input('Пожалуйста, укажите длину стороны:'))
   ice2(n, a)
 
 if __name__ == '__main__':
